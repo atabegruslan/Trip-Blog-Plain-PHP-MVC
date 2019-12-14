@@ -14,11 +14,11 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 
 ## Facebook Developer Console Setup
 
-![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignIn1.PNG)
+![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignin1.PNG)
 
-![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignIn2.PNG)
+![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignin2.PNG)
 
-![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignIn3.PNG)
+![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignin3.PNG)
 
 - https://www.tutorialspoint.com/php/php_facebook_login.htm?fbclid=IwAR3GRF-FSdNIiEvEO18HlrUImiGFf3YjSazR3-4QGZZJLyP4NETE5BRkF0Q
 - https://developers.facebook.com/docs/reference/php/
