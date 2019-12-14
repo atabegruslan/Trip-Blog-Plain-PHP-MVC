@@ -1,0 +1,12 @@
+img.small{
+	width: 100px;
+}
+img.medium{
+	padding: 30px;
+}
+img#captcha{
+	border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    margin-bottom: 5px;
+}
