@@ -10,11 +10,26 @@ class Bootstrap {
 
 	private function setup_constants()
 	{
+		$configFile = file_get_contents(getcwd().'/.config');
+		$rows = explode("\n", $configFile);
+		foreach ($rows as $row => $data) {
+		    $row_data = explode('=', $data);
+		    define(trim($row_data[0]), trim($row_data[1]) );
+		}
+
 		define('DS', '/');
 		define('APP_NAME', 'trip_blog');
-		define('APP_FOLDER', 'phpmvc');
 		define('APP_NAME_DISPLAY', 'Trip Blog');
+
+		if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+			define('APP_FOLDER', APP_FOLDER_DEV);
+		} else {
+			define('APP_FOLDER', APP_FOLDER_PROD);
+		}
+
+		$_SERVER['REQUEST_SCHEME'] = $_SERVER['REQUEST_SCHEME'] ? $_SERVER['REQUEST_SCHEME'] : 'http';
 		define('BASE_URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].DS.APP_FOLDER.DS.APP_NAME.DS);
+
 		define('CSS_URL', BASE_URL.'public/css'.DS);
 		define('JS_URL', BASE_URL.'public/js'.DS);
 		define('IMAGES_URL', BASE_URL.'public/uploads'.DS);
@@ -26,20 +41,13 @@ class Bootstrap {
 
 		define("IMG_RAD", 800);
 
-		$configFile = file_get_contents(getcwd().'/.config');
-		$rows = explode("\n", $configFile);
-		foreach ($rows as $row => $data) {
-		    $row_data = explode('=', $data);
-		    define(trim($row_data[0]), trim($row_data[1]) );
-		}
-
 		if (strpos(BASE_URL, 'localhost') !== false) {
-			define('DB_NAME', APP_NAME.'_phpmvc');
-			define('DB_USER', DB_USERNAME);
-			define('DB_PASS', DB_USERNAME);
+			define('DB_NAME', DB_DEV);
+			define('DB_USER', DB_DEV_USER);
+			define('DB_PASS', DB_DEV_PASS);
 		} else {
-			define('DB_NAME', DB_PROD_PREX.APP_NAME);
-			define('DB_USER', DB_USERNAME);
+			define('DB_NAME', DB_PROD);
+			define('DB_USER', DB_PROD_USER);
 			define('DB_PASS', DB_PROD_PASS);
 		}
 

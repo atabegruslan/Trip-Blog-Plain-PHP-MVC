@@ -2,7 +2,7 @@ Plain PHP MVC CRUD Blog App
 
 ## Website:
 
-https://ruslan-website.com/plain_php_mvc/trip_blog/entry <sup>down</sup>
+https://ruslan-website.com/plain_php_mvc/trip_blog/
 
 ## Tutorial
 
@@ -14,4 +14,11 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 
 ## Facebook Developer Console Setup
 
-![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/fbdev.png)
+![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignIn1.PNG)
+
+![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignIn2.PNG)
+
+![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/FBSignIn3.PNG)
+
+- https://www.tutorialspoint.com/php/php_facebook_login.htm?fbclid=IwAR3GRF-FSdNIiEvEO18HlrUImiGFf3YjSazR3-4QGZZJLyP4NETE5BRkF0Q
+- https://developers.facebook.com/docs/reference/php/

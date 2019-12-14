@@ -21,60 +21,48 @@
  * DEALINGS IN THE SOFTWARE.
  *
  */
-namespace Facebook\HttpClients;
+namespace Facebook\Exceptions;
 
 /**
- * Class FacebookStream
- *
- * Abstraction for the procedural stream elements so that the functions can be
- * mocked and the implementation can be tested.
+ * Class FacebookResumableUploadException
  *
  * @package Facebook
  */
-class FacebookStream
+class FacebookResumableUploadException extends FacebookSDKException
 {
-    /**
-     * @var resource Context stream resource instance
-     */
-    protected $stream;
+    protected $startOffset;
+
+    protected $endOffset;
 
     /**
-     * @var array Response headers from the stream wrapper
+     * @return int|null
      */
-    protected $responseHeaders = [];
-
-    /**
-     * Make a new context stream reference instance
-     *
-     * @param array $options
-     */
-    public function streamContextCreate(array $options)
+    public function getStartOffset()
     {
-        $this->stream = stream_context_create($options);
+        return $this->startOffset;
     }
 
     /**
-     * The response headers from the stream wrapper
-     *
-     * @return array
+     * @param int|null $startOffset
      */
-    public function getResponseHeaders()
+    public function setStartOffset($startOffset)
     {
-        return $this->responseHeaders;
+        $this->startOffset = $startOffset;
     }
 
     /**
-     * Send a stream wrapped request
-     *
-     * @param string $url
-     *
-     * @return mixed
+     * @return int|null
      */
-    public function fileGetContents($url)
+    public function getEndOffset()
     {
-        $rawResponse = file_get_contents($url, false, $this->stream);
-        $this->responseHeaders = $http_response_header ?: [];
+        return $this->endOffset;
+    }
 
-        return $rawResponse;
+    /**
+     * @param int|null $endOffset
+     */
+    public function setEndOffset($endOffset)
+    {
+        $this->endOffset = $endOffset;
     }
 }

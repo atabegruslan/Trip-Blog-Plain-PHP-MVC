@@ -64,7 +64,8 @@ class Social extends Controller {
 			$_SESSION['fb_token'] = $sess->getToken();  
 
 			// graph api request for user data
-			$request = new FacebookRequest($sess, 'GET', '/me?fields=id,name,email');
+			//$request = new FacebookRequest($sess, 'GET', '/me?fields=id,name,email');
+			$request = new FacebookRequest($sess, 'GET', '/me');
 			$response = $request->execute();
 
 			// get response
