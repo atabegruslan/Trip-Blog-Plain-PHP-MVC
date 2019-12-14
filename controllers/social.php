@@ -1,5 +1,6 @@
 <?php 
 
+//require_once(ROOT_DIR."libs/Facebook/autoload.php");
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookRequest;
@@ -8,10 +9,10 @@ use Facebook\FacebookSDKException;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
+use Facebook\GraphUser;
 use Facebook\Entities\AccessToken;
 use Facebook\HttpClients\FacebookCurlHttpClient;
 use Facebook\HttpClients\FacebookHttpable;
-use Facebook\GraphUser;
 
 class Social extends Controller {
 
@@ -64,8 +65,7 @@ class Social extends Controller {
 			$_SESSION['fb_token'] = $sess->getToken();  
 
 			// graph api request for user data
-			//$request = new FacebookRequest($sess, 'GET', '/me?fields=id,name,email');
-			$request = new FacebookRequest($sess, 'GET', '/me');
+			$request = new FacebookRequest($sess, 'GET', '/me?fields=id,name,email');
 			$response = $request->execute();
 
 			// get response
@@ -97,7 +97,7 @@ class Social extends Controller {
 
 		$user = $this->model->read($socialUser['email'], $socialUser['type']);
 
-		if (empty($user)) { // user havent been here before via fb
+		if (empty($user) || $user === false) { // user havent been here before via fb
 			$this->model->create($socialUser);
 		}
 
