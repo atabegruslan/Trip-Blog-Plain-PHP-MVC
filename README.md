@@ -22,3 +22,14 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 
 - https://www.tutorialspoint.com/php/php_facebook_login.htm?fbclid=IwAR3GRF-FSdNIiEvEO18HlrUImiGFf3YjSazR3-4QGZZJLyP4NETE5BRkF0Q
 - https://developers.facebook.com/docs/reference/php/
+
+---
+
+# OAuth2 Theory
+
+---
+
+# Todos
+
+- Twig
+- Grunt
