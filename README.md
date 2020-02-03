@@ -67,8 +67,17 @@ https://gruntjs.com/plugins
 - `npm install --save-dev grunt-contrib-less`
 - `npm install --save-dev grunt-contrib-coffee`
 
+- `npm install --save-dev grunt-contrib-watch`
+
+- `npm install --save-dev grunt-express`
+
+- `npm install --save-dev grunt-contrib-copy`
+- `npm install --save-dev grunt-contrib-concat`
+- `npm install --save-dev grunt-contrib-cssmin`
+- `npm install --save-dev grunt-contrib-uglify`
+- `npm install --save-dev grunt-usemin`
+
 - See `gruntfile.js`
-- `grunt`
 
 ---
 
