@@ -1,0 +1,24 @@
+{
+  "name": "trip_blog",
+  "version": "1.0.0",
+  "description": "https://ruslan-website.com/plain_php_mvc/trip_blog/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/issues"
+  },
+  "homepage": "https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-coffee": "^2.1.0",
+    "grunt-contrib-less": "^2.0.0"
+  }
+}

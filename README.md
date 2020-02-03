@@ -23,6 +23,8 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 - https://www.tutorialspoint.com/php/php_facebook_login.htm?fbclid=IwAR3GRF-FSdNIiEvEO18HlrUImiGFf3YjSazR3-4QGZZJLyP4NETE5BRkF0Q
 - https://developers.facebook.com/docs/reference/php/
 
+---
+
 # Twig
 
 1. `composer init`
@@ -35,7 +37,7 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 
 5. `require 'vendor/autoload.php'`  in https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/index.php
 
-6. In `composer.json`
+6. In https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/composer.json
 ```
 "autoload": {
     "files": [
@@ -46,11 +48,24 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 
 7. `composer dump-autoload`
 
-8. See `helpers/twig_helper.php`
+8. See https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/helpers/twig_helper.php
 
 9. In code: `echo $twig->render('test.html', [ 'users' => [ Blah... ] ]);`
 
 10. In template file: `{{ users }}`
+
+---
+
+# Grunt
+
+1. `npm install -g grunt-cli`
+2. `npm init`
+3. `npm install --save-dev grunt`
+
+https://gruntjs.com/plugins
+
+- `npm install --save-dev grunt-contrib-less`
+- `npm install --save-dev grunt-contrib-coffee`
 
 ---
 
