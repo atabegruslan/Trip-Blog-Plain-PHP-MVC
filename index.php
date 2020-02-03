@@ -1,5 +1,7 @@
 <?php 
 
+require 'vendor/autoload.php';
+
 spl_autoload_register('load');
 
 function load($class)
@@ -15,12 +17,18 @@ function load($class)
         'models/',
     );
 
-    foreach( $dirs as $dir ) {
-        if (file_exists($dir.$class.'.php')) {
+    foreach ( $dirs as $dir ) 
+    {
+        if (file_exists($dir.$class.'.php')) 
+        {
             require($dir.$class.'.php');
+
             return;
-        } else if ( file_exists( $dir. strtolower($class) .'.php' ) ) { // Linux servers are case sensitive
+        } 
+        else if ( file_exists( $dir. strtolower($class) .'.php' ) ) 
+        { // Linux servers are case sensitive
             require( $dir. strtolower($class) .'.php' );
+
             return;            
         }
     }
