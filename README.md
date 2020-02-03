@@ -71,6 +71,8 @@ https://gruntjs.com/plugins
 
 # OAuth2 Theory
 
+![](https://raw.githubusercontent.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/master/Illustrations/Oauth.png)
+
 ---
 
 # Todos
