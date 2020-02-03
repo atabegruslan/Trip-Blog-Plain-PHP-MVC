@@ -67,6 +67,9 @@ https://gruntjs.com/plugins
 - `npm install --save-dev grunt-contrib-less`
 - `npm install --save-dev grunt-contrib-coffee`
 
+- See `gruntfile.js`
+- `grunt`
+
 ---
 
 # OAuth2 Theory
