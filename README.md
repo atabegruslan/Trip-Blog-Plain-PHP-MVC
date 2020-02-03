@@ -51,3 +51,13 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 9. In code: `echo $twig->render('test.html', [ 'users' => [ Blah... ] ]);`
 
 10. In template file: `{{ users }}`
+
+---
+
+# OAuth2 Theory
+
+---
+
+# Todos
+
+- Grunt
