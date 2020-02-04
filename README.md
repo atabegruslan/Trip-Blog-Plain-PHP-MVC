@@ -83,6 +83,10 @@ https://gruntjs.com/plugins
 - `npm install --save-dev grunt-contrib-uglify`
 - `npm install --save-dev grunt-usemin`
 
+- Using grunt to build front end php files: 
+	- https://stackoverflow.com/questions/30629273/using-grunt-for-front-end-with-php
+	- `npm install --save-dev grunt-php`
+
 - See `gruntfile.js`
 
 ---
