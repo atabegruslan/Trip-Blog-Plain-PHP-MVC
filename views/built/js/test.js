@@ -1,1 +1,0 @@
-function add(n,t){return n+t}function times(n,t){return n*t}

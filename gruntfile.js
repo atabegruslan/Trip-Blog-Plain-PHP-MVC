@@ -7,14 +7,16 @@
 // 		coffee:{
 // 			compile:{
 // 				files:{
-// 					'public/js/site.js' : 'views/coffee/site.coffee'
+// 					'prebuilt/js/add.js' : 'prebuilt/coffee/add.coffee',
+// 					'prebuilt/js/times.js' : 'prebuilt/coffee/times.coffee'
 // 				}
 // 			}
 // 		},
 // 		less:{
 // 			compile:{
 // 				files:{
-// 					'public/css/site.css' : 'views/less/site.less'
+// 					'prebuilt/css/red.css' : 'prebuilt/less/red.less',
+// 					'prebuilt/css/blue.css' : 'prebuilt/less/blue.less'
 // 				}
 // 			}
 // 		}
@@ -35,19 +37,21 @@
 // 		coffee:{
 // 			compile:{
 // 				files:{
-// 					'public/js/site.js' : 'views/coffee/site.coffee'
+// 					'prebuilt/js/add.js' : 'prebuilt/coffee/add.coffee',
+// 					'prebuilt/js/times.js' : 'prebuilt/coffee/times.coffee'
 // 				}
 // 			}
 // 		},
 // 		less:{
 // 			compile:{
 // 				files:{
-// 					'public/css/site.css' : 'views/less/site.less'
+// 					'prebuilt/css/red.css' : 'prebuilt/less/red.less',
+// 					'prebuilt/css/blue.css' : 'prebuilt/less/blue.less'
 // 				}
 // 			}
 // 		},
 // 		watch:{
-// 			files:['views/coffee/*.coffee', 'views/less/*.less'],
+// 			files:['prebuilt/coffee/*.coffee', 'prebuilt/less/*.less'],
 // 			tasks:['coffee', 'less'],
 // 		}
 // 	});
@@ -65,31 +69,33 @@
 // {
 // 	grunt.initConfig({
 // 		pkg:grunt.file.readJSON('package.json'),
-// 		coffee:{
-// 			compile:{
-// 				files:{
-// 					'public/js/site.js' : 'views/coffee/site.coffee'
-// 				}
-// 			}
-// 		},
-// 		less:{
-// 			compile:{
-// 				files:{
-// 					'public/css/site.css' : 'views/less/site.less'
-// 				}
-// 			}
-// 		},
-// 		watch:{
-// 			options:{livereload:true},
-// 			coffee:{
-// 				files:'views/coffee/*.coffee',
-// 				tasks:'coffee'
-// 			},
-// 			less:{
-// 				files:'views/less/*.less',
-// 				tasks:'less'
-// 			}
-// 		},
+//		coffee:{
+//			compile:{
+//				files:{
+//					'prebuilt/js/add.js' : 'prebuilt/coffee/add.coffee',
+//					'prebuilt/js/times.js' : 'prebuilt/coffee/times.coffee'
+//				}
+//			}
+//		},
+//		less:{
+//			compile:{
+//				files:{
+//					'prebuilt/css/red.css' : 'prebuilt/less/red.less',
+//					'prebuilt/css/blue.css' : 'prebuilt/less/blue.less'
+//				}
+//			}
+//		},
+//		watch:{
+//			options:{livereload:true},
+//			coffee:{
+//				files:'prebuilt/coffee/*.coffee',
+//				tasks:'coffee'
+//			},
+//			less:{
+//				files:'prebuilt/less/*.less',
+//				tasks:'less'
+//			}
+//		},
 // 		express:{
 // 			all:{
 // 				options:{
@@ -117,16 +123,16 @@ module.exports = function(grunt)
 	require('load-grunt-tasks')(grunt)
 	grunt.initConfig({
 		useminPrepare:{
-			html:'prebuilt/test.html',
+			html:'prebuilt/header.html',
 			options:{dest:'views'}
 		},
 		usemin:{
-			html:['views/test.html']
+			html:['views/header.html']
 		},
 		copy:{
 			task0:{
-				src:'prebuilt/test.html',
-				dest:'views/test.html'
+				src:'prebuilt/header.html',
+				dest:'views/header.html'
 			}
 		}
 	});
