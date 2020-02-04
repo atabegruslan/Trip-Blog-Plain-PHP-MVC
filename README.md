@@ -103,6 +103,4 @@ https://gruntjs.com/plugins
 
 # Todos
 
-- Twig
-- Grunt
 - Compass sprites instead of images
