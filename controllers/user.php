@@ -16,17 +16,6 @@ class User extends Controller
 	{
 		if ($_SERVER['REQUEST_METHOD'] === 'GET') 
 		{
-			/* TESTING TWIG @todo fix later
-			$twig = get_twig();
-
-			$users = [
-				['name' => 'Dick', 'age' => 9, 'password' => 'pee'],
-				['name' => 'Virginia', 'age' => 90, 'password' => 'poo']
-			];
-
-			echo $twig->render('test.html', ['users' => $users]);
-			*/
-
 			$this->view->render('user/login');
 
 			return true;

@@ -1,5 +1,9 @@
 # Plain PHP MVC CRUD Blog App
 
+## Accounts
+
+Test: ruslan_aliyev_@hotmail.com/ruslan
+
 ## Website:
 
 https://ruslan-website.com/plain_php_mvc/trip_blog/
@@ -101,3 +105,4 @@ https://gruntjs.com/plugins
 
 - Twig
 - Grunt
+- Compass sprites instead of images

@@ -1,9 +1,10 @@
+{% include "header.html" with {data: data} %}
 <div class="container">
 
 	<div class='row'>
 		<ul class="list-inline">
 			<li>
-				<button onclick="location.href = '<?php echo BASE_URL; ?>entry/';">Back</button>
+				<button onclick="location.href = '{{ data.baseUrl }}entry/';">Back</button>
 			</li>
 		</ul>
 	</div>
@@ -12,18 +13,18 @@
 
 	    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
 
-	        <form class="form" enctype="multipart/form-data" method="post" action="<?php echo BASE_URL; ?>entry/update/<?php echo $this->data['id']; ?>">
+	        <form class="form" enctype="multipart/form-data" method="post" action="{{ data.baseUrl }}entry/update/{{ data.data.id }}">
 
-	            <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>" />
+	            <input type="hidden" name="user_id" value="{{ data.userId }}" />
 
 	            <div class="form-group">
 	                <label for="place">Place: </label>
-	            	<input type="text" name="place" placeholder="<?php echo $this->data['place']; ?>" class="form-control" id="place" />
+	            	<input type="text" name="place" placeholder="{{ data.data.place }}" class="form-control" id="place" />
 	            </div>
 
 	            <div class="form-group">
 	                <label for="comments">Comments: </label>
-	            	<textarea rows="10" id="comments" class="form-control" placeholder="<?php echo $this->data['comments']; ?>" name="comments"></textarea>
+	            	<textarea rows="10" id="comments" class="form-control" placeholder="{{ data.data.comments }}" name="comments"></textarea>
 	            </div>
 
 	            <div class="form-group">
@@ -41,30 +42,30 @@
 	        
 	    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
 	                
-	        <img src="<?php echo $this->data['img']; ?>" class="img-responsive medium" alt="<?php echo $this->data['place']; ?>">
+	        <img src="{{ data.data.img }}" class="img-responsive medium" alt="{{ data.data.place }}">
 
 	        <table class="table">
 	            <thead>
 	                <tr>
 	                    <th>Place: </th>
-	                    <th><?php echo $this->data['place']; ?></th>
+	                    <th>{{ data.data.place }}</th>
 	                </tr>
 	            </thead>
 	            <tbody>
 	                <tr>
 	                    <td><strong>By: </strong></td>
-	                    <td><?php echo $this->data['user_id']; ?></td>
+	                    <td>{{ data.data.user_id }}</td>
 	                </tr>
 	                <tr>
 	                    <td><strong>Modified: </strong></td>
-	                    <td><?php echo $this->data['time']; ?></td>
+	                    <td>{{ data.data.time }}</td>
 	                </tr>
 	            </tbody>
 	        </table>     
 
 	        <div>
 	            <p><strong>Comments: </strong></p>
-	            <p><?php echo $this->data['comments']; ?></p>
+	            <p>{{ data.data.comments }}</p>
 	        </div>   
 
 	    </div>
@@ -72,5 +73,5 @@
 	</div>
 
 </div>
-
+{% include "footer.html" with {data: data} %}
 	

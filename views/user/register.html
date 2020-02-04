@@ -1,8 +1,9 @@
+{% include "header.html" with {data: data} %}
 <div class="container">
 
 	<h2>Register</h2>
 
-	<form class="form" method="POST" action="<?php echo BASE_URL; ?>incomer/register">
+	<form class="form" method="POST" action="{{data.baseUrl}}incomer/register">
 		<div class="form-group">
 			<label for="name">Name:</label>
 			<input type="name" class="form-control" id="name" name="name" placeholder="Enter name">
@@ -23,7 +24,7 @@
 			<input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm password">
 		</div>
 
-		<img src="<?php echo SYS_IMAGES_URL; ?>captcha.php" id="captcha" />
+		<img src="{{data.sysImgUrl}}captcha.php" id="captcha" />
 
 		<div class="form-group">
 			<label for="captcha">Captcha:</label> 
@@ -33,5 +34,7 @@
 		<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 
-	<?php include(VIEWS_DIR."_parts/social.php"); ?>
+	{% include "_parts/social.html" with {data: data} %}
+}
 </div>
+{% include "footer.html" with {data: data} %}

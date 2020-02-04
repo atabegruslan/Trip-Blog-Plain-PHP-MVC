@@ -1,18 +1,19 @@
+{% include "header.html" with {data: data} %}
 <div class="container">
 
 	<div class='row'>
 		<ul class="list-inline">
 			<li>
-				<button onclick="location.href = '<?php echo BASE_URL; ?>entry/';">Back</button>
+				<button onclick="location.href = '{{ data.baseUrl }}entry/';">Back</button>
 			</li>
 		</ul>
 	</div>
 
 	<div class="row">
 	        
-	    <form class="form" enctype="multipart/form-data" method="post" action="<?php echo BASE_URL; ?>entry/create/">
+	    <form class="form" enctype="multipart/form-data" method="post" action="{{ data.baseUrl }}entry/create/">
 
-	    	<input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>" />
+	    	<input type="hidden" name="user_id" value="{{ data.userId }}" />
 
 	        <div class="form-group">
 	            <label for="place">Place: </label>
@@ -29,7 +30,7 @@
 	            <input type="file" name="image" class="img-thumbnail form-control-file" id="image" />
 	        </div>
 
-	        <!--csrf-->
+	        <!-- @todo csrf -->
 	        
 	        <input type="submit" class="btn btn-default" value="Create" />
 
@@ -38,5 +39,5 @@
 	</div>
 
 </div>
-
+{% include "footer.html" with {data: data} %}
 	

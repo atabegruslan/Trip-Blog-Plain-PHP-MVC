@@ -7,7 +7,7 @@ use Twig\TwigFilter;
 
 function get_twig()
 {
-	$loader = new FilesystemLoader('views/templates');
+	$loader = new FilesystemLoader('views');
 	$twig   = new Environment($loader);
 
 	$md5Filter = new TwigFilter('md5', function($string) {

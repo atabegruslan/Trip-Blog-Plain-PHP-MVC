@@ -1,0 +1,39 @@
+{% include "header.html" with {data: data} %}
+<div class="container">
+
+	<div class='row'>
+		<ul class="list-inline">
+			<li>
+				<button onclick="location.href = '{{ data.baseUrl }}entry/create/';">Create New</button>
+			</li>
+		</ul>
+	</div>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Place</th>
+				<th>Time</th>
+				<th>User</th>
+				<th>Comments</th>
+				<th>Pic</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for entry in data.data %}
+				<tr>
+					<td>
+						<a href="{{ data.baseUrl }}entry/read/{{ entry.id }}">
+							{{ entry.place }}
+						</a>
+					</td>
+					<td>{{ entry.time }}</td>
+					<td>{{ entry.user_id }}</td>
+					<td>{{ entry.comments }}</td>
+					<td><img src="{{ entry.img }}" class="img-responsive small"></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% include "footer.html" with {data: data} %}

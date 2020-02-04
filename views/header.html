@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ data.appTitle }}</title>
+    <link rel="icon" href="{{ data.baseUrl }}favicon.ico">
+	<link rel="stylesheet" href="{{ data.cssUrl }}default.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+</head>
+
+<body>
+	<div id="auth">
+		{% if data.userId is not null %}
+
+			<form action="{{ data.baseUrl }}user/logout/" method="post">
+			    <button>Logout</button>
+			</form>
+
+		{% else %}
+
+			{% if 'login' in data.requestUrl %}
+				<button onclick="location.href = '{{ data.baseUrl }}user/register/';">Register</button>
+			{% else %}
+				<button onclick="location.href = '{{ data.baseUrl }}user/login/';">Login</button>
+			{% endif %}
+
+		{% endif %}
+	</div>
