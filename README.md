@@ -27,6 +27,8 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 
 # Twig
 
+https://www.youtube.com/playlist?list=PLfdtiltiRHWEDq2ZY4sK5551_7ePE-SI8
+
 1. `composer init`
 
 2. `composer search Twig`
@@ -58,6 +60,8 @@ https://github.com/atabegruslan/Trip-Blog-Plain-PHP-MVC/blob/master/Illustration
 
 # Grunt
 
+https://www.youtube.com/playlist?list=PLKiuVKZics1f_GZ6Tl2Zp-TEmD-YpvtBn
+
 1. `npm install -g grunt-cli`
 2. `npm init`
 3. `npm install --save-dev grunt`
@@ -71,6 +75,8 @@ https://gruntjs.com/plugins
 
 - `npm install --save-dev grunt-express`
 
+- `npm install --save-dev load-grunt-tasks`
+- `npm install --save-dev grunt-parallel`
 - `npm install --save-dev grunt-contrib-copy`
 - `npm install --save-dev grunt-contrib-concat`
 - `npm install --save-dev grunt-contrib-cssmin`
@@ -89,4 +95,5 @@ https://gruntjs.com/plugins
 
 # Todos
 
+- Twig
 - Grunt

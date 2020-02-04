@@ -26,6 +26,8 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-express": "^1.4.1",
-    "grunt-usemin": "^3.1.1"
+    "grunt-parallel": "^0.5.1",
+    "grunt-usemin": "^3.1.1",
+    "load-grunt-tasks": "^5.1.0"
   }
 }

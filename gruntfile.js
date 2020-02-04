@@ -110,24 +110,23 @@
 // 	grunt.registerTask('server', ['express', 'watch']);
 // }
 
-/* load-grunt-tasks plugin - Run `grunt build` */
-/* @todo unfinished */
+/* load-grunt-tasks and usemin plugins - Run `grunt build` */
 
 module.exports = function(grunt)
 {
 	require('load-grunt-tasks')(grunt)
 	grunt.initConfig({
 		useminPrepare:{
-			html:'start/index.html',
-			options:{dest:'finish'}
+			html:'prebuilt/test.html',
+			options:{dest:'views'}
 		},
 		usemin:{
-			html:['finish/index.html']
+			html:['views/test.html']
 		},
 		copy:{
 			task0:{
-				src:'start/index.html',
-				dest:'finish/index.html'
+				src:'prebuilt/test.html',
+				dest:'views/test.html'
 			}
 		}
 	});
